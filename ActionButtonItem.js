@@ -143,7 +143,8 @@ export default class ActionButtonItem extends Component {
       parentSize,
       size,
       position,
-      spaceBetween
+      spaceBetween,
+      hideIcon
     } = this.props;
     const offsetTop = Math.max(size / 2 - TEXT_HEIGHT / 2, 0);
     const positionStyles = { top: offsetTop };
@@ -155,7 +156,7 @@ export default class ActionButtonItem extends Component {
       positionStyles[position] =
         offsetX + (parentSize - size) / 2 + size + spaceBetween;
     } else {
-      positionStyles.right = WIDTH / 2 + size / 2 + spaceBetween;
+      positionStyles.right = WIDTH / 2 + (hideIcon ? 0 : (size / 2 + spaceBetween));
     }
 
     const textStyles = [
