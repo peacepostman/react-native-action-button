@@ -54,7 +54,8 @@ export default class ActionButtonItem extends Component {
       position,
       verticalOrientation,
       hideShadow,
-      spacing
+      spacing,
+      hideIcon
     } = this.props;
 
     if (!this.props.active) return null;
@@ -106,6 +107,7 @@ export default class ActionButtonItem extends Component {
         pointerEvents="box-none"
         style={[animatedViewStyle, parentStyle]}
       >
+        {!hideIcon ?
         <View>
           <Touchable
             testID={this.props.testID}
@@ -125,6 +127,7 @@ export default class ActionButtonItem extends Component {
             </View>
           </Touchable>
         </View>
+         : null}
         {this._renderTitle()}
       </Animated.View>
     );
