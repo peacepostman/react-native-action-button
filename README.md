@@ -136,6 +136,7 @@ Take a look at [this gist](https://gist.github.com/mmazzarolo/cfd467436f9d110e94
 | ------------- |:-------------:|:------------:       | ----------- |
 | size          | number        | parentSize          | use this to change the size of the Button
 | title         | string        | undefined           | the title shown next to the button. When `undefined` the title is not hidden
+| hideIcon         | boolean        | false           | Hide the icon button but keep the title
 | onPress       | func          | null                | **required** function, triggers when a button is tapped
 | buttonColor   | string        | same as + button    | background color of the Button
 | titleColor    | string        | "#444"              | color of title, *removed* in v2.5. use `textStyle` instead
