@@ -154,7 +154,7 @@ export default class ActionButtonItem extends Component {
 
     if (position !== "center") {
       positionStyles[position] =
-        offsetX + (parentSize - size) / 2 + size + spaceBetween;
+        offsetX + (hideIcon ? 0 : (parentSize - size) / 2 + size + spaceBetween);
     } else {
       positionStyles.right = WIDTH / 2 + (hideIcon ? 0 : (size / 2 + spaceBetween));
     }
